@@ -1,0 +1,63 @@
+<!-- script -->
+    <script>
+         var coll = document.getElementsByClassName("collapsible");
+         var i;
+         
+         for (i = 0; i < coll.length; i++) {
+           coll[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             var content = this.nextElementSibling;
+             if (content.style.maxHeight){
+               content.style.maxHeight = null;
+             } else {
+               content.style.maxHeight = content.scrollHeight + "px";
+             } 
+           });
+         }
+         
+      </script>
+  
+ 
+  
+<style>
+.accordian-blk .content1 ul{flex-wrap: wrap; padding-bottom:15px;}
+.accordian-blk .content1 ul li{width: 100%;     margin-bottom: 5px;}
+ h2.collapsible { margin: 1px 0!important;}
+ h2.collapsible.active { background-color: #ebeaea;}
+.text-box{ padding:20px 0;}
+.collapsible { background-color: #ebeaea; cursor: pointer; padding:10px; width: 100%; border: none; text-align: left; outline: none; font-size:19px; border-bottom: 1px solid #fff;  }
+               .collapsible:hover {
+               background-color: #ebeaea;
+               }
+               .collapsible:after {
+               content: '\002B';
+               color:#696969;
+               font-weight: 100;
+               float: right;
+               margin-left: 5px;
+               }
+               .content1 {
+               padding: 0 18px;
+               max-height: 0;
+               overflow: hidden;
+               transition: max-height 0.2s ease-out;
+               }
+.collapsible:hover {  background-color: #d8d6d6!important; }
+.text-box ul {
+    list-style: circle;
+    margin-left: 16px;
+}
+</style>
+<div class="container">
+   <div class="row">
+      <h2 style="text-align:center;   margin-bottom: 15px;">Nephrologist FAQs </h2>
+      <div class="accordian-blk">
+         <h3 class="collapsible">What kind of doctor should I consult for hair loss?</h3>
+         <div class="content1">
+            <div class="text-box">
+               <p>Hair loss is a distressing condition that can result from many factors. The condition can be permanent or temporary. If you suffer from excessive hair loss, it is necessary to consult a dermatologist who treats issues concerning the skin, hair and nails.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
